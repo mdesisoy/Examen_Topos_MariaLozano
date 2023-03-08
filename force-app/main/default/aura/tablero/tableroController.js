@@ -7,7 +7,7 @@
         component.set("v.score", 0)
         var action = component.get("c.getRandomNumber");
         var lastNumber = component.get("v.lastNumber");
-        console.log("lastNumber: "+lastNumber)
+        console.log("lastNumber: " +lastNumber)
         //necesito settear los parametros del método antes
         action.setParams({
             "min": 1,
@@ -21,7 +21,8 @@
                 var numAleatorio = response.getReturnValue();
                 
                 var randomEvent = $A.get("e.c:random");
-                randomEvent.setParams({"random": numAleatorio});
+                randomEvent.setParams({"random": numAleatorio, "lastNumber": lastNumber});
+                component.set("v.lastNumber", lastNumber)
                 randomEvent.fire();
                 console.log(numAleatorio);
             }
