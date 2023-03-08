@@ -2,10 +2,11 @@
     myAction : function(component, event, helper) {
 
     },
-
+    //funcion iniciar juego que llamar a método apex y pone el score a 0
     clickStart : function(component, event, helper) {
         component.set("v.score", 0)
         var action = component.get("c.getRandomNumber");
+        //necesito settear los parametros del método antes
         action.setParams({
             "min": 1,
             "max": 8
@@ -25,6 +26,7 @@
         $A.enqueueAction(action);
     },
 
+    //funcion seguir si el boton que ha pulsado es el correcto y para sumar el score
     clickContinue: function(component, event, helper) {
         var action = component.get("c.getRandomNumber");
         action.setParams({
@@ -43,7 +45,7 @@
                     component.set("v.score", component.get("v.score")+1);
                     console.log("score", component.get("v.score"));
                 }
-                else{
+                else{ //si está mal se pone a 0
                     component.set("v.score", 0);
                     console.log("score", component.get("v.score"));
                 }
@@ -54,7 +56,10 @@
         });
         $A.enqueueAction(action);
     },
+
+    //funcion finalizar muestra el contenido de score
     alertscore: function(component, event, helper) {    
-        alert(component.get("v.score"));
+        var score = component.get("v.score");
+        alert("Tu score es: " + score);
     }
 })

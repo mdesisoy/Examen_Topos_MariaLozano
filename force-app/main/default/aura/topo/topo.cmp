@@ -1,8 +1,13 @@
 <aura:component>
+    <!--el componente topo es el hijo que se encuentra dentro del componente tablero-->
+    <aura:attribute name="componenteTablero" type="Aura.component"/>
+     <!--pasar el evento-->
+    <aura:handler event="c:random" action="{!c.checkMonigote}"/>
+    <!--atributos-->
     <aura:attribute name="posicion" type="Integer" />
     <aura:attribute name="random" type="Integer" />
     <aura:attribute name="color" type="String" default="azul"/>
 
     <div class="{!v.color}" onclick="{!c.click}"></div>
-    <aura:handler event="c:random" action="{!c.checkMonigote}"/>
+    
 </aura:component>
