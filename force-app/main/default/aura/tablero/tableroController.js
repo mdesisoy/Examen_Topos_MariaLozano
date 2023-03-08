@@ -4,6 +4,7 @@
     },
     //funcion iniciar juego que llamar a método apex y pone el score a 0
     iniciarJuego : function(component, event, helper) {
+
         component.set("v.score", 0)
         var action = component.get("c.getRandomNumber");
         //necesito settear los parametros del método antes
@@ -20,11 +21,19 @@
                 var randomEvent = $A.get("e.c:random");
                 randomEvent.setParams({"random": numAleatorio});
                 randomEvent.fire();
+                // var findcomp = component.find('numeroAleatorio'); //para relaciona hijo padre
+                // findcomp.paraTablerodesdeHijo();
                 console.log(numAleatorio);
             }
         });
         $A.enqueueAction(action);
     },
+
+    //funcion para paraTablerodesdeHijo
+    // paraTablerodesdeHijo : function(component, event, helper) {
+    //     //creo un alert que saca el numero del topo que ha salido
+    //     alert("El topo es el num: " + component.get(v.posicion));
+    // },
 
     //funcion seguir si el boton que ha pulsado es el correcto y para sumar el score
     sigo: function(component, event, helper) {
@@ -44,7 +53,7 @@
                 
                 var randomEvent = $A.get("e.c:random");
                 console.log(event.getParam("pulsadoBien"));
-                if (event.getParam("pulsadoBien")) {
+                if (event.getParam("pulsadoBien")) { //si coincide se suma 1 en el score
                     component.set("v.score", component.get("v.score")+1);
                     console.log("score", component.get("v.score"));
                 }

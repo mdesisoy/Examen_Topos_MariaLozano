@@ -9,16 +9,16 @@
     <div>SCORE: {!v.score}</div>
 
         <div style="display:flex">
-            <c:topo posicion="1" />
-            <c:topo  posicion="2" />
-            <c:topo  posicion="3" />
-            <c:topo  posicion="4" />
+            <c:topo  posicion="1" aura:id="1"/>
+            <c:topo  posicion="2" aura:id="2"/>
+            <c:topo  posicion="3" aura:id="3"/>
+            <c:topo  posicion="4" aura:id="4"/>
         </div>
         <div style="display:flex">
-            <c:topo  posicion="5" />
-            <c:topo  posicion="6" />
-            <c:topo  posicion="7" />
-            <c:topo  posicion="8" />
+            <c:topo  posicion="5" aura:id="5"/>
+            <c:topo  posicion="6" aura:id="6"/>
+            <c:topo  posicion="7" aura:id="7"/>
+            <c:topo  posicion="8" aura:id="8"/>
         </div>
     
 

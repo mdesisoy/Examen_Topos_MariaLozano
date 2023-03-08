@@ -7,6 +7,8 @@
     <aura:attribute name="posicion" type="Integer" />
     <aura:attribute name="random" type="Integer" />
     <aura:attribute name="color" type="String" default="rosa"/>
+    <!--funcion de padre a hijo-->
+    <!-- <aura:method name="paraTablero" action="{!c.paraTablerodesdeHijo}"/> -->
 
     <div class="{!v.color}" onclick="{!c.click}"></div>
     
