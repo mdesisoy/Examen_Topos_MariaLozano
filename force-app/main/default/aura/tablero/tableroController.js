@@ -4,12 +4,11 @@
     },
 
     clickStart : function(component, event, helper) {
-        document.getElementById("tablero").style.display = "block";
         component.set("v.score", 0)
         var action = component.get("c.getRandomNumber");
         action.setParams({
             "min": 1,
-            "max": 9
+            "max": 8
         });
         action.setCallback(this, function(response) {
             var state = response.getState();
@@ -30,7 +29,7 @@
         var action = component.get("c.getRandomNumber");
         action.setParams({
             "min": 1,
-            "max": 9
+            "max": 8
         });
         action.setCallback(this, function(response) {
             var state = response.getState();
@@ -41,7 +40,11 @@
                 var randomEvent = $A.get("e.c:random");
                 console.log(event.getParam("pulsadoBien"));
                 if (event.getParam("pulsadoBien")) {
-                    component.set("v.score", component.get("v.score") + 1)
+                    component.set("v.score", component.get("v.score")+1);
+                    console.log("score", component.get("v.score"));
+                }
+                else{
+                    component.set("v.score", 0);
                     console.log("score", component.get("v.score"));
                 }
                 randomEvent.setParams({"random": numAleatorio});
