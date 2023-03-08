@@ -4,7 +4,7 @@
     },
 
     //funcion checkear que comprueba si la posicion es igual al numero aleatorio
-    checkMonigote: function(component, event, helper) {
+    check: function(component, event, helper) {
         component.set("v.color", "rosa");
         component.set("v.random", event.getParam("random"));
         //si coincide el numero aleatorio con la posicion entonces se pone el color verde

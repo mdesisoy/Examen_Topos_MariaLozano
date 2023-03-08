@@ -3,15 +3,15 @@
 
 .THIS .verde{
     background-color: olivedrab;
+    border: 2px solid crimson;
+    margin: 1px;
     width: 100px;
     height: 70px; 
-    border: 2px solid crimson;
-    margin: 2px auto;
 }
 .THIS .rosa{
     background-color: pink;
+    border: 2px solid crimson;
+    margin: 1px;
     width: 100px;
     height: 70px; 
-    border: 2px solid crimson;
-    margin: 2px auto;
 }

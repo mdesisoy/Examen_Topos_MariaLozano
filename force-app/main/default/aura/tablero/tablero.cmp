@@ -1,8 +1,10 @@
-<aura:component controller="Random">
-    <aura:handler event="c:pulsadoBien" action="{!c.clickContinue}"/>
+<aura:component controller="random">
+    <!--evento para comporbar si es correcto-->
+    <aura:handler event="c:pulsadoBien" action="{!c.sigo}"/>
     <!--el tablero es el padre que contiene a los componentes topo-->
     <!--dentro del tablero hay 8 topos--> 
     <aura:attribute name="score" type="Integer" />
+    <aura:attribute name="lastNumber" type="Integer" default="0"/> <!--para que no salga el mismo topo dos veces-->
     <!--el score es el contador de puntos-->
     <div>SCORE: {!v.score}</div>
 
@@ -21,7 +23,7 @@
     
 
     <!--botón play para iniciar el juego-->
-    <input type="button" value="Play" onclick="{!c.clickStart}"/>
+    <input type="button" value="Play" onclick="{!c.iniciarJuego}"/>
     <!--botón stop para terminar el juego-->
-    <input type="button" value="Stop" onclick="{!c.alertscore}"/>
+    <input type="button" value="Stop" onclick="{!c.terminarJuego}"/>
 </aura:component>	
