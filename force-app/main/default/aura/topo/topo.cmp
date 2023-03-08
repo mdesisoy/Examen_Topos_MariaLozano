@@ -1,0 +1,8 @@
+<aura:component>
+    <aura:attribute name="posicion" type="Integer" />
+    <aura:attribute name="random" type="Integer" />
+    <aura:attribute name="color" type="String" default="azul"/>
+
+    <div class="{!v.color}" onclick="{!c.click}"></div>
+    <aura:handler event="c:random" action="{!c.checkMonigote}"/>
+</aura:component>

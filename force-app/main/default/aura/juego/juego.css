@@ -1,0 +1,15 @@
+.THIS {
+}
+
+.THIS .azul{
+    background-color: olivedrab;
+    width: 100px;
+    height: 70px; 
+    border: 2px solid crimson;
+}
+.THIS .rojo{
+    background-color: pink;
+    width: 100px;
+    height: 70px; 
+    border: 2px solid crimson;
+}
