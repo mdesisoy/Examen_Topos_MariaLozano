@@ -1,0 +1,22 @@
+<aura:component>
+    <aura:handler event="c:pasarTabla" action="{!c.showLead}"/>
+    <aura:attribute name="score" type="Integer" />
+    <aura:attribute name="leadList" type="Object[]" />
+    <table>
+		<thead>
+		<tr>
+			<th>Partida</th>
+			<th>Score</th>
+		</tr>
+	</thead>
+	<tbody>
+	<aura:iteration items="{!v.leadList}" var="lead" indexVar="index">
+		<tr>
+			<td>{!index}</td>
+			<td>{!lead.score}</td>
+		</tr>
+	</aura:iteration>
+	</tbody>
+</table>
+</aura:component>	
+
