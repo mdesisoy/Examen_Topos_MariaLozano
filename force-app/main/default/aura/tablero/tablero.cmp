@@ -3,7 +3,7 @@
     <aura:handler event="c:pulsadoBien" action="{!c.sigo}"/>
     <!--el tablero es el padre que contiene a los componentes topo-->
     <!--dentro del tablero hay 8 topos--> 
-    <aura:attribute name="score" type="Integer" />
+    <aura:attribute name="score" type="Integer" aura:id="score"/>
     <aura:attribute name="lastNumber" type="Integer" default="0"/> <!--para que no salga el mismo topo dos veces-->
     <!--el score es el contador de puntos-->
     <div>SCORE: {!v.score}</div>
