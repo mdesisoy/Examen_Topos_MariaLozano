@@ -2,6 +2,7 @@
     <aura:handler event="c:pasarTabla" action="{!c.showLead}"/>
     <aura:attribute name="score" type="Integer" />
     <aura:attribute name="leadList" type="Object[]" />
+	<!-- <span class="slds-text-heading_large">ultimo lead insertado {!v.score}</span> probado para ver si va -->
     <table>
 		<thead>
 		<tr>

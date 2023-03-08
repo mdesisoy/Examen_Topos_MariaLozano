@@ -69,7 +69,7 @@
         //disparar evento pasarTabla
         var action = $A.get("e.c:pasarTabla");
         // recuperamos los valores de los campos
-        var score  = component.find("score").getElement().value;
+        var score  = component.get("v.score");
         // asignamos los valores a los parámetros del evento
         action.setParams({
             "score": score
